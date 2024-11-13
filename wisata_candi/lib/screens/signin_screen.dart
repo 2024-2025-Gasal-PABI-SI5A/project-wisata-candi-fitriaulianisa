@@ -27,8 +27,6 @@ class _SignInScreenState extends State<SignInScreen> {
       appBar: AppBar(
         title: const Text('Sign In'),
       ),
-    
-      
 
       //TODO: 3. Pasang body
       body: Center(
@@ -45,10 +43,9 @@ class _SignInScreenState extends State<SignInScreen> {
                   TextFormField(
                     controller: _usernameController,
                     decoration: const InputDecoration(
-                      labelText: 'Nama Pengguna',
-                      hintText: 'Masukkan nama pengguna',
-                      border: OutlineInputBorder()
-                    ),
+                        labelText: 'Nama Pengguna',
+                        hintText: 'Masukkan nama pengguna',
+                        border: OutlineInputBorder()),
                   ),
                   //TODO: 6. Buat TextFormField untuk Kata Sandi
                   const SizedBox(height: 20),
@@ -66,31 +63,37 @@ class _SignInScreenState extends State<SignInScreen> {
                           });
                         },
                         icon: Icon(
-                          _obscurePassword ? Icons.visibility_off : Icons.visibility,
-                      
+                          _obscurePassword
+                              ? Icons.visibility_off
+                              : Icons.visibility,
                         ),
                       ),
-            
                     ),
                     obscureText: _obscurePassword,
                   ),
                   //TODO: 7. Buat ElevatedButton untuk Sign In
-                  const
-                   SizedBox(height: 20,),
-                   ElevatedButton(
-                    onPressed: (){},
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
                     child: const Text('Sign In'),
-                   ),
-                   //TODO: 8. Pasang TextButton untuk Sign Up
-                   const SizedBox(height: 10,),
+                  ),
+                  //TODO: 8. Pasang TextButton untuk Sign Up
+                  const SizedBox(
+                    height: 10,
+                  ),
                   //  TextButton(
-                  //   onPressed: (){}, 
+                  //   onPressed: (){},
                   //   child: Text('Belum punya akun? Daftar disini.'),
                   // ),
                   RichText(
                     text: TextSpan(
                       text: 'Belum punya akun?',
-                      style: const TextStyle(fontSize: 16, color: Colors.deepPurple),
+                      style: const TextStyle(
+                        fontSize: 16,
+                        color: Colors.deepPurple,
+                      ),
                       children: [
                         TextSpan(
                           text: 'Daftar di sini.',
@@ -102,7 +105,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           recognizer: TapGestureRecognizer()..onTap = () {},
                         ),
                       ],
-                    ),  
+                    ),
                   )
                 ],
               ),
@@ -110,7 +113,6 @@ class _SignInScreenState extends State<SignInScreen> {
           ),
         ),
       ),
-      
     );
   }
 }
