@@ -32,10 +32,10 @@ class MainApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      // home: DetailScreen(candi: candiList[0],),
+      //home: DetailScreen(candi: candiList[0],),
       // home: ProfileScreen(),
 
-      // home: SignInScreen(),
+      //home: SignInScreen(),
       home: SignupScreen(),
     );
   }
